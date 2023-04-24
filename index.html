@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rating Stars Example</title>
+    <style>
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+        
+        .rating>span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+        
+        .rating>span:hover:before,
+        .rating>span:hover~span:before {
+            content: "\2605";
+            position: absolute;
+            color: gold;
+        }
+        
+        .rating>span:before {
+            content: "\2606";
+            position: absolute;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Ratings</h1>
+    <p>Rate this product:</p>
+    <div class="rating">
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+        <span>&#9734;</span>
+    </div>
+</body>
+
+</html>
